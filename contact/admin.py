@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Contact, Contact_CSV
+
+to_register = [Contact, Contact_CSV]
+
+admin.site.register(to_register)

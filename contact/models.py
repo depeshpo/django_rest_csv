@@ -12,3 +12,10 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.full_name()
+
+
+class Contact_CSV(models.Model):
+    csv = models.FileField(upload_to='csv/contact/')
+
+    def __str__(self):
+        return self.csv.name
